@@ -9,14 +9,13 @@
 import { WorkflowPayload, DispatchHistory, DispatchHistoryEntry} from './types.js';
 
 export async function dispatchWorkflow(
-    owner: string,
     repo: string,
     workflow: string,
     ref: string,
     pat: string,
     payload: WorkflowPayload
 ): Promise<Response> {
-    const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${workflow}/dispatches`;
+    const url = `https://api.github.com/repos/ipo-praemien/${repo}/actions/workflows/${workflow}/dispatches`;
 
     const headers = {
         "Content-Type": "application/json",

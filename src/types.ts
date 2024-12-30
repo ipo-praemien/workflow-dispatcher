@@ -10,7 +10,6 @@ export enum Status {
 }
 export type WorkflowPayload = Record<string, string>;
 export type DispatchHistoryEntry = {
-    owner: string;
     repo: string;
     workflow: string;
     ref: string;

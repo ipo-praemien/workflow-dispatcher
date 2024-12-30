@@ -28,10 +28,6 @@ export function displayDispatchHistory(history: DispatchHistory): void {
     history.forEach((entry) => {
         const row = document.createElement("tr");
 
-        // Owner cell
-        const ownerCell = document.createElement("td");
-        ownerCell.textContent = entry.owner;
-
         // Repo cell
         const repoCell = document.createElement("td");
         repoCell.textContent = entry.repo;
@@ -74,7 +70,6 @@ export function displayDispatchHistory(history: DispatchHistory): void {
         timestampCell.textContent = new Date(entry.timestamp).toLocaleString();
 
         // Append all cells to the row
-        row.appendChild(ownerCell);
         row.appendChild(repoCell);
         row.appendChild(workflowCell);
         row.appendChild(refCell);
